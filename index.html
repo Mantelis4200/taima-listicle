@@ -634,6 +634,138 @@
     .usp-text { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.4; }
 
     /* ==============================================
+       DR. WHITFIELD QUOTE BLOCK
+       ============================================== */
+    .doc-quote-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: #EAF6F1;
+      border: 1px solid #C0E0D4;
+      border-radius: 8px;
+      padding: 24px 26px;
+      margin: 32px 0 0;
+    }
+    .doc-quote-avatar {
+      flex-shrink: 0;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: #B0D8CC;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+    }
+    .doc-quote-body { flex: 1; min-width: 0; }
+    .doc-quote-text {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-style: italic;
+      color: #1A3C30;
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .doc-quote-attr {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 14px;
+    }
+    .doc-quote-btn {
+      display: inline-block;
+      background: var(--masthead);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      padding: 11px 22px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      transition: background .2s;
+    }
+    .doc-quote-btn:hover { background: #333; }
+
+    /* ==============================================
+       CHEF'S REVIEW
+       ============================================== */
+    .chef-review {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      background: #FDFAF4;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 26px;
+      margin: 14px 0 0;
+      position: relative;
+    }
+    .chef-photo-wrap {
+      flex-shrink: 0;
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      border: 3px solid var(--danger);
+      overflow: hidden;
+      background: #e8e0d0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .chef-photo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top;
+      display: block;
+    }
+    .chef-photo-placeholder {
+      font-size: 36px;
+      line-height: 1;
+    }
+    .chef-quote-body { flex: 1; min-width: 0; }
+    .chef-quote-mark {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      line-height: .7;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .chef-quote-text {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--text);
+      font-style: italic;
+    }
+    .chef-quote-text strong { font-style: normal; }
+
+    /* ==============================================
+       FEATURE TAGS ROW
+       ============================================== */
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 14px 0 32px;
+      justify-content: center;
+    }
+    .feat-tag {
+      display: inline-block;
+      background: #F3EFE4;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 6px 14px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .doc-quote-block { flex-direction: column; text-align: center; }
+      .chef-review { flex-direction: column; text-align: center; }
+      .chef-quote-mark { text-align: left; }
+    }
+
+    /* ==============================================
        CTA SECTION
        ============================================== */
     .cta-block {
@@ -1208,6 +1340,40 @@
       <div class="usp-item"><span class="usp-check">✓</span><span class="usp-text">Engineered to last generations, not years</span></div>
     </div>
   </section>
+
+  <!-- ==================== DR. WHITFIELD QUOTE ==================== -->
+  <div class="doc-quote-block fade-up">
+    <div class="doc-quote-avatar">🧑‍⚕️</div>
+    <div class="doc-quote-body">
+      <p class="doc-quote-text">"Pure titanium is one of the most biocompatible materials known to science. The fact that it's now available in everyday cookware is a genuine advancement in consumer health."</p>
+      <div class="doc-quote-attr">– Dr. James Whitfield, Integrative Medicine Physician</div>
+      <a href="https://taimatitanium.com/products/taima-titanium-nutri-pan-pro-2-0" class="doc-quote-btn" target="_blank">Shop TAIMA® Now →</a>
+    </div>
+  </div>
+
+  <!-- ==================== CHEF'S REVIEW ==================== -->
+  <div class="chef-review fade-up">
+    <div class="chef-photo-wrap">
+      <img src="./images/chef-james.jpg" alt="Executive Chef James Martinez"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="chef-photo-placeholder" style="display:none;">👨‍🍳</div>
+    </div>
+    <div class="chef-quote-body">
+      <span class="chef-quote-mark">"</span>
+      <p class="chef-quote-text">"I've been cooking professionally for 20 years, and I've never seen anything like this," <strong>says Executive Chef James Martinez.</strong> "I've had my TAIMA pan for 8 months now — it still performs exactly like the day I got it. With my old non-stick pans, the coating would start degrading within months. This is the first pan I've ever used that I genuinely believe I'll never have to replace."</p>
+    </div>
+  </div>
+
+  <!-- ==================== FEATURE TAGS ==================== -->
+  <div class="feature-tags fade-up">
+    <span class="feat-tag">99.86% Grade 1 Titanium</span>
+    <span class="feat-tag">5-Ply Construction</span>
+    <span class="feat-tag">SlipScale™ Surface</span>
+    <span class="feat-tag">No Coatings</span>
+    <span class="feat-tag">No PFAS</span>
+    <span class="feat-tag">FDA-Compliant</span>
+    <span class="feat-tag">Lifetime Warranty</span>
+  </div>
 
   <!-- ==================== PRIMARY CTA ==================== -->
   <section class="cta-block fade-up" id="cta">
